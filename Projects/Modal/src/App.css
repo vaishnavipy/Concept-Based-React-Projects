@@ -1,0 +1,82 @@
+body{
+    background: url("./image.jpg") ;
+    background-repeat: no-repeat;
+    background-size:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    height: 100vh;
+}
+
+.modal-container{
+    align-self: center;
+    width:90vw;
+    max-width: 600px ;
+    padding: 2em 0;
+    background-color: white;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height:200px;
+    flex-direction: column;
+
+}
+.modal-container button{
+    color: white;
+    background-color: #49A6E9;
+    outline: none;
+    border:none;
+    border-radius: 10px;
+    font-size: 1rem;
+    padding: 0.5em;
+    cursor: pointer;
+ align-self: center;
+   
+}
+.modal-container h1{
+    font-size: 4rem;
+    padding: 0.5em;
+    margin: 0;
+    letter-spacing: 2px;
+    color:#112A43;
+   
+    max-width: 100%;
+}
+.content{
+    border-radius: 20px;
+    width:100%;
+    border: 1px solid black;
+    display: none;
+    z-index: 2;
+    background-color: white;
+}
+.content h1{
+    font-size: 3rem;
+   
+}
+.close{
+  text-align: right;
+  font-size: 2rem;
+  color:red;
+  cursor: pointer;
+  padding: 0.2em;
+ 
+}
+
+.blur::after{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(157,202,235,0.4) ;
+
+}
+
+
+
