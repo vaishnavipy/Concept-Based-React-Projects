@@ -1,0 +1,285 @@
+body{
+    background-image: url("https://vannilla-js-basic-project-17-stripe-submenus.netlify.app/images/hero.svg");
+   
+    background-size:contain;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.container{
+   
+}
+.main-flex{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.navbar-container{
+    max-width:1150px;
+    width:90%;
+    margin:auto;
+    padding: 1em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ 
+}
+.nav-outer{
+    width: 100vw;
+    height:80px;
+    position: fixed;
+}
+
+.menu-icon{
+    display: none;
+    color: white;
+    font-size: 1.3rem;
+    background-color: #222323;
+    padding: 0.4em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 1s;
+
+}
+.menu-icon:hover{
+    background-color: #A5CFF4;
+}
+
+.links-div{
+    display: flex;
+}
+
+.links{
+   
+  font-weight: 600;
+    color:white;
+   cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0.5em 1.4em;
+  
+}
+
+/*------ TOOLTIP------------*/
+.tooltip-h5{
+    color: #112A43;
+    padding: 0.5em 0;
+   
+}
+.tooltip-grid{
+    width: auto;
+    display: flex;
+    white-space: nowrap;
+}
+.tooltip-category{
+    padding: 0.5em 2em;
+}
+.Products-tooltip,.Company-tooltip, .Developers-tooltip{
+    position: relative;
+    display: inline-block;
+   
+  }
+
+  
+  .Products-tooltip .tooltiptext ,.Company-tooltip .tooltiptext , .Developers-tooltip .tooltiptext {
+    visibility: hidden;
+    width: auto;
+    background-color: white;
+    color: #637E98;
+    text-align: left;
+    border-radius: 6px;
+    padding: 1em;
+    position: absolute;
+    z-index: 1;
+    top: 150%;
+    left: 50%;
+   
+    box-shadow: 2px 2px 4px grey;
+  }
+  
+  .Products-tooltip .tooltiptext::after ,.Company-tooltip .tooltiptext::after , .Developers-tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+  }
+  
+  .Products-tooltip:hover .tooltiptext,.Company-tooltip:hover .tooltiptext, .Developers-tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+
+
+
+.sign-in{
+    background-color: #222323;
+    color:white;
+    border:none;
+    outline: none;
+    border-radius: 15px;
+    padding: 0.5em;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 1s;
+}
+.sign-in:hover{
+    background-color: #A5CFF4;
+}
+
+.body-grid{
+    
+  
+    max-width:1150px;
+    width:90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 65% 35%;
+   
+   
+}
+.content{
+    height: 100vh;
+    align-self: center;
+    padding-top: 120px ;
+    justify-self: center;
+  
+}
+.content h1{
+    padding: 0;
+    margin: 0;
+    color:#112A43;
+    font-size: 5rem;
+    line-height: 1;
+}
+.mobile-img{
+  
+    height: 40vw;
+    align-self: flex-start;
+    justify-self: center;
+}
+.mobile-img img{
+    height: 100%;
+}
+
+
+.content p{
+    line-height: 1.8;
+    padding: 0.6em 0;
+    color: #637E98;
+    font-size: 1.3rem;
+}
+
+.blur::after{
+    content: "";
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 1;
+
+}
+
+.modal{
+    display: none;
+    margin: 1.2em;
+    width: 95vw;
+    height: 95vh;
+   position: fixed;
+  
+    background-color: white;
+    z-index: 2;
+    border-radius: 20px;
+}
+
+.close-modal{
+  font-size: 1.6rem;
+  padding: 1em;
+    text-align: right;
+    font-weight: 600;
+    color:#617D98;
+    cursor: pointer;
+
+}
+.category-container{
+    width:80%;
+    margin: 1em auto;
+
+}
+.category-container h4{
+    margin: 0;
+    padding: 0;
+    color: #112A43;
+}
+.category-container p{
+    cursor: pointer;
+    margin: 0.5em 0;
+    padding: 0;
+}
+.category-grid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.icons{
+    color:#617D98;
+    padding: 0.5em;
+}
+
+@media (max-width:1400px){
+    .mobile-img{
+        padding-top: 140px ;
+    }
+    
+}
+@media (min-width:500px) and (max-width:1100px){
+    .body-grid{
+        padding-top:9vh;
+    }
+   .content h1{
+       font-size:2.5rem ;
+   }
+    
+}
+
+@media (max-width:800px){
+   
+    .body-grid{
+        grid-template-columns: 1fr;
+    }
+    body{
+       background-size: auto;
+    }
+    .mobile-img{
+        display: none;
+    }
+    .links-div{
+        display: none;
+    }
+    #sign-in{
+        display: none;
+    }
+    .menu-icon{
+        display: inline;
+    }
+    .content p{
+        font-size: 0.9rem;
+    }
+   
+    
+}
+@media (min-width:801px){
+    .modal{
+        display: none !important;
+    }
+    .blur::after{
+        background:transparent ;
+       z-index: -1 !important;
+    }
+
+
+}
